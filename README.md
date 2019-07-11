@@ -1,4 +1,4 @@
-# Nuclei-Segmentation-in-Histopathology-Images-Internship-Stuff-
+# Nuclei-Segmentation-in-Histopathology-Images-Internship-Work
 
 **This repository includes the brief report of the work done during the internship at MeDAL IIT Bombay.**
 <br/>
@@ -30,8 +30,14 @@ The next paper which we followed is [CE-Net: Context Encoder Network for 2D Medi
 
 This paper proposes similar network architecture as that of U-Net adding DAC and RMP block to it. The main function of these extra blocks is to extract features from shapes of every possible size, so that this network architecture can be generalised for segmentation of different types of medical images such as optic disc segmentation, lung segmentation, cell boundary segmentation etc. The loss used here in Dice coefficient loss. 
 
-We tried this model on MoNuSeg dataset. 
+**We tried this model on MoNuSeg dataset.** 
 1. First we tried it to train for localisation and detection task. The results are quite well. The result images will be made available soon.
 2. Then we tried it to train for nuclei segmentation directly. We found that it is having problem in distinguishing between overlapping nuclei. 
 3. Hence we have come up with the way to use task 1 training for the benefit of the task 2. The work on this new architecture is in progress. Results will made available soon. 
 
+
+### Experiment 3:-
+
+The results of the paper [Mask-RCNN](https://arxiv.org/abs/1703.06870) are quite remarkable for the task of instance segmentation. Our work would have been incomplete without exploring this model for the Nuclei segmentation task. 
+
+We trained the Mask-RCNN model from scratch and got the results. The output images were noiseless with fine boundaries. We were able to calculate it's AJI straight away, which came out to be 0.5598  
