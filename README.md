@@ -12,7 +12,7 @@ The MoNuSeg (Multi-organ Nuclei Segmentation) dataset was obtained by carefully 
 
 ### Experiment 1:-
 
-we first analysed the method adopted in the paper "Deep advesarial training for multi-organ Nuclei segmentation in Histopathology images".
+We first analysed the method adopted in the paper [Deep advesarial training for multi-organ Nuclei segmentation in Histopathology images](https://arxiv.org/abs/1810.00236).
 This paper is heavily based on the GANs for the nuclei segmentation purpose. First of all, to avoid the problem of small size of the data, we first tried to create H&E image-mask pair using Cycle-GAN and randomly generated masks.
 Using these artificially generated image-mask pairs, nuclei segmentation is performed using conditional GANs (pix2pix image translation).
 The AJI as claimed by the authors over MoNuSeg dataset is 0.721.
@@ -25,4 +25,13 @@ The AJI as claimed by the authors over MoNuSeg dataset is 0.721.
 
 
 ### Experiment 2:- 
+
+The next paper which we followed is [CE-Net: Context Encoder Network for 2D Medical Image Segmentation](https://arxiv.org/abs/1903.02740).
+
+This paper proposes similar network architecture as that of U-Net adding DAC and RMP block to it. The main function of these extra blocks is to extract features from shapes of every possible size, so that this network architecture can be generalised for segmentation of different types of medical images such as optic disc segmentation, lung segmentation, cell boundary segmentation etc. The loss used here in Dice coefficient loss. 
+
+We tried this model on MoNuSeg dataset. 
+1. First we tried it to train for localisation and detection task. The results are quite well. The result images will be made available soon.
+2. Then we tried it to train for nuclei segmentation directly. We found that it is having problem in distinguishing between overlapping nuclei. 
+3. Hence we have come up with the way to use task 1 training for the benefit of the task 2. The work on this new architecture is in progress. Results will made available soon. 
 
