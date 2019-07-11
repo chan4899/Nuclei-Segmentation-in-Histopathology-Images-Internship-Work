@@ -33,11 +33,17 @@ This paper proposes similar network architecture as that of U-Net adding DAC and
 **We tried this model on MoNuSeg dataset.** 
 1. First we tried it to train for localisation and detection task. The results are quite well. The result images will be made available soon.
 2. Then we tried it to train for nuclei segmentation directly. We found that it is having problem in distinguishing between overlapping nuclei. 
-3. Hence we have come up with the way to use task 1 training for the benefit of the task 2. The work on this new architecture is in progress. Results will made available soon. 
+3. Hence we have come up with the way to use task 1 training for the benefit of the task 2. The work on this new architecture is in progress. Results will be made available soon. 
 
 
 ### Experiment 3:-
 
 The results of the paper [Mask-RCNN](https://arxiv.org/abs/1703.06870) are quite remarkable for the task of instance segmentation. Our work would have been incomplete without exploring this model for the Nuclei segmentation task. 
 
-We trained the Mask-RCNN model from scratch and got the results. The output images were noiseless with fine boundaries. We were able to calculate it's AJI straight away, which came out to be 0.5598  
+We trained the Mask-RCNN model from scratch and got the results. The output images were noiseless with fine boundaries. We were able to calculate it's AJI straight away, which came out to be 0.5598
+
+Still we will give attempts to train this model by tuning it's hyperparameters, and continuosly update the results.
+
+
+
+**Note:-**  Images are yet to be included.
